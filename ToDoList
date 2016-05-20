@@ -1,0 +1,18 @@
+As of 5/19/2016
+---------------
+
+Add exception for dividing by zero
+
+Add exception/error response if user enters a non-number (letter, special character, etc.)
+
+Add output of sum as a decimal instead of a whole number
+I assume using "double" instead of "int" but I don't want the user input to show up as a decimal 
+(i.e. when user enters "2", it shows up as "2.0", which is what I don't want)
+
+Add GUI. Still trying to wrap my head aroung Swing/JFrame/JButton.
+
+Add a "C" function to clear or reset the program. 
+From what I've read & researched, this isn't possible within Eclipse's console,
+and I'll have to resort to add "\n" multiple times in order to make it seem like the console was cleared.
+
+---------------
