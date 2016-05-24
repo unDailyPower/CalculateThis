@@ -7,10 +7,10 @@ Edits:
 
 - Added decimalFormat so that whole numbers are displayed as whole numbers, and fractions are displayed as decimals.
 
-- ~~By accident, this also took care of the dividing by zero exception (which already existed, but it crashed the program)
-  When the user tries to divide by zero, the output is "?" and the option to restart the program appears.~~
+- By accident, this also took care of the dividing by zero exception (which already existed, but it crashed the program)
+  When the user tries to divide by zero, the output is "?" and the option to restart the program appears.
 
-- Fixed that bug by adjusting scannerObject.nextInt to scannerObject.nextDouble. User can now input decimals and whole numbers.
+- Fixed a bug by adjusting scannerObject.nextInt to scannerObject.nextDouble. User can now input decimals and whole numbers.
 
 5/19/2016 
 
