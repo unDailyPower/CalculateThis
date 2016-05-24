@@ -3,12 +3,16 @@ package calculator;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class Calculator {
 
 	public static void main (String[] args){
 		
-		int n1, n2;
+		DecimalFormat format = new DecimalFormat();
+        format.setDecimalSeparatorAlwaysShown(false);
+        
+      	double n1, n2;
 		String operation;
 		Scanner scannerObject = new Scanner(System.in);
 		
@@ -25,19 +29,19 @@ public class Calculator {
 		switch (operation) {
 		
 		case "+":
-			System.out.println((n1+n2));
+			System.out.println(format.format(n1+n2));
 			break;
 			
 		case "-":
-			System.out.println((n1-n2));
+			System.out.println(format.format(n1-n2));
 			break;
 			
 		case "*":
-			System.out.println((n1*n2));
+			System.out.println(format.format(n1*n2));
 			break;
 			
 		case "/":
-			System.out.println((n1/n2));
+			System.out.println(format.format(n1/n2));
 			break;
 			
 		default:
