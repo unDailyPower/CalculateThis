@@ -16,11 +16,11 @@ public class Calculator {
 		String operation;
 		Scanner scannerObject = new Scanner(System.in);
 		
-		System.out.println("Enter First Whole Number\n");
-		n1 = scannerObject.nextInt();
+		System.out.println("Enter First Number\n");
+		n1 = scannerObject.nextDouble();
 		
-		System.out.println("Enter Second Whole Number\n");
-		n2 = scannerObject.nextInt();
+		System.out.println("Enter Second Number\n");
+		n2 = scannerObject.nextDouble();
 		
 		Scanner operator = new Scanner(System.in);
 		System.out.println("Enter +, -, *, or /\n");
