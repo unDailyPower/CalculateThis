@@ -10,7 +10,7 @@ Edits:
 - Removed the "You killed the program." line when a user enters anything other than the letter "r" when prompted to restart the program.
   Program now restarts (when prompted) with any key(s) entered.
 
-
+- Used a Try/Catch on each input. If user attempts to enter a non-numerical value, they will receive an error message and program will restart.
 
 5/24/2016 
 
