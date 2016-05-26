@@ -3,6 +3,7 @@ package calculator;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Scanner;
+//import java.util.*;
 import java.text.DecimalFormat;
 
 public class Calculator {
@@ -13,12 +14,13 @@ public class Calculator {
         format.setDecimalSeparatorAlwaysShown(false);
         
       	double n1, n2;
+      	
 		String operation;
 		Scanner scannerObject = new Scanner(System.in);
 		
 		System.out.println("Enter First Number\n");
 		n1 = scannerObject.nextDouble();
-		
+		        						
 		System.out.println("Enter Second Number\n");
 		n2 = scannerObject.nextDouble();
 		
@@ -54,12 +56,13 @@ public class Calculator {
 		try{
             System.out.println("Type 'r' to restart\n");
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            String input = br.readLine();
-            if(input.equals("r"))
+            String reset = br.readLine();
+            if(reset.equals("r"))
             	restart(args);
       
             else
-                System.out.println("You killed the program.");
+                System.out.println("You did not type 'r', restarting anyway.");
+            		restart(args);
         }
         catch(Exception e)
             {e.printStackTrace();}
