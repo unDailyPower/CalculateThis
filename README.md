@@ -3,6 +3,15 @@ Calculator. This is a work in progress. At present, I have the program as consol
 
 Edits:
 
+5/26/2016
+
+- Made variable names more descriptive.
+
+- Removed the "You killed the program." line when a user enters anything other than the letter "r" when prompted to restart the program.
+  Program now restarts (when prompted) with any key(s) entered.
+
+
+
 5/24/2016 
 
 - Added decimalFormat so that whole numbers are displayed as whole numbers, and fractions are displayed as decimals.
