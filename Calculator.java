@@ -2,6 +2,7 @@ package calculator;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 //import java.util.*;
 import java.text.DecimalFormat;
@@ -13,18 +14,31 @@ public class Calculator {
 		DecimalFormat format = new DecimalFormat();
         format.setDecimalSeparatorAlwaysShown(false);
         
-      	double n1, n2;
+      	double n1 = 0, n2 = 0;
       	
-		String operation;
+		String operation = null;
 		Scanner scannerObject = new Scanner(System.in);
 		
+		try{
 		System.out.println("Enter First Number\n");
 		n1 = scannerObject.nextDouble();
-		        						
+		}
+		catch (InputMismatchException nfe) {
+			System.out.println("That's not a number.");
+			restart(args);
+		}
+		
+		try{
 		System.out.println("Enter Second Number\n");
 		n2 = scannerObject.nextDouble();
+		}
+		catch (InputMismatchException nfe) {
+			System.out.println("That's not a number.");
+			restart(args);
+		}
 		
 		Scanner operator = new Scanner(System.in);
+		
 		System.out.println("Enter +, -, *, or /\n");
 		operation = operator.next();
 		
