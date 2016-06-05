@@ -8,39 +8,36 @@ import java.util.Scanner;
 import java.text.DecimalFormat;
 
 public class Calculator {
+	static Scanner scannerObject = new Scanner(System.in);
 
+	public static double getNumber(String prompt){
+		double result;
+		
+		try{
+			System.out.println(prompt);
+			result = scannerObject.nextDouble();
+			}
+			catch (InputMismatchException nfe) {
+				String badInput = scannerObject.next();
+				System.out.println(badInput + " is not a number.");
+				result = getNumber(prompt);
+			}
+		
+		return result;
+	}
 	public static void main (String[] args){
 		
 		DecimalFormat format = new DecimalFormat();
         format.setDecimalSeparatorAlwaysShown(false);
         
-      	double n1 = 0, n2 = 0;
+     	double n1 = getNumber("Enter First Number\n");
+      	
+      	double n2 = getNumber("Enter Second Number\n");
       	
 		String operation = null;
-		Scanner scannerObject = new Scanner(System.in);
-		
-		try{
-		System.out.println("Enter First Number\n");
-		n1 = scannerObject.nextDouble();
-		}
-		catch (InputMismatchException nfe) {
-			System.out.println("That's not a number.");
-			restart(args);
-		}
-		
-		try{
-		System.out.println("Enter Second Number\n");
-		n2 = scannerObject.nextDouble();
-		}
-		catch (InputMismatchException nfe) {
-			System.out.println("That's not a number.");
-			restart(args);
-		}
-		
-		Scanner operator = new Scanner(System.in);
-		
+				
 		System.out.println("Enter +, -, *, or /\n");
-		operation = operator.next();
+		operation = scannerObject.next();
 		
 		switch (operation) {
 		
