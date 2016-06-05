@@ -3,6 +3,10 @@ Calculator. This is a work in progress. At present, I have the program as consol
 
 Edits:
 
+6/4/2016
+
+- Added new function "getNumber" and recursive loop for user input. No more restart when user enters a non-numerical value.
+
 5/26/2016
 
 - Made variable names more descriptive.
